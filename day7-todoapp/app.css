@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #00071c;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+}
+
+.todo-app {
+    background-image: linear-gradient(90deg, #0e002d 0%, #070016 100%, #120136 100%);
+    padding: 10px 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(120, 120, 120, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    background-color: #1c1c1c;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.add-btn {
+    background-color: #ff3737;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button {
+    background-color: #1c1c1c;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#task-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #202020;
+    border-radius: 4px;
+    border: 2px solid #8f8f8f;
+}
+
+.task-text{
+    width: 100%;
+    height: 60px;
+    overflow-y: scroll;
+    padding: 0 10px;
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.task-buttons {
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn,
+.delete-btn{
+    padding: 4px 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+
+
+.edit-btn {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+.filters{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.filter-btn{
+    background-color: #1c1c1c;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 0px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 2px;
+}
+
+.filter-btn:hover {
+    opacity: 0.8;
+} 
+
+.active {
+    background-color: #42f377;
+    color: white;
+}
+
+.modalEdit{
+    position: absolute;
+    top: -50%;
+    transform: translateY(50%);
+    height: 200px;
+    width: 250px;
+    background-color: #202020;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.editActive{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#editConfirm{
+    background-color: #f0ad4e;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+#editCancel{
+    background-color: #d9534f;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+#editInput{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #8f8f8f;
+}
+
+.btns{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.completed{
+    text-decoration: line-through;
+}
